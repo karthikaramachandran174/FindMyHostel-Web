@@ -105,7 +105,7 @@ const Bills = () => {
 
   const handleDelete = async (billId) => {
     try {
-      await axios.delete(`http://localhost:8080/api/profile/bills/${billId}`);
+      await axios.delete(`http://localhost:8080/api/profile/deletebills/${billId}`);
       setBills(bills.filter((bill) => bill._id !== billId)); 
       console.log('Bill deleted successfully');
     } catch (error) {

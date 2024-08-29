@@ -133,7 +133,7 @@ const BillFormModal = ({ isOpen, onClose, bill, onRefresh }) => {
       };
 
       if (bill) {
-        await axios.put(`http://localhost:8080/api/profile/bills/${bill._id}`, billData);
+        await axios.put(`http://localhost:8080/api/profile/updatebills/${bill._id}`, billData);
         toast.success('Bill updated successfully');
       } else {
         await axios.post('http://localhost:8080/api/profile/bills', billData);
